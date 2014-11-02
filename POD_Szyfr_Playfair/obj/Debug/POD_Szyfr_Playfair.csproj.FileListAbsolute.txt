@@ -1,0 +1,17 @@
+c:\users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\bin\Debug\POD_Szyfr_Playfair.exe.config
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\bin\Debug\POD_Szyfr_Playfair.exe
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\bin\Debug\POD_Szyfr_Playfair.pdb
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.csprojResolveAssemblyReference.cache
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\MainWindow.baml
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\MainWindow.g.cs
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\App.g.cs
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair_MarkupCompile.cache
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.g.resources
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.Properties.Resources.resources
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.csproj.GenerateResource.Cache
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.exe
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair.pdb
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\POD_Szyfr_Playfair_MarkupCompile.lref
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\Instrukcja.g.cs
+C:\Users\witko_000\documents\visual studio 2013\Projects\Podstawy Ochrony Danych\POD_Szyfr_Playfair\POD_Szyfr_Playfair\obj\Debug\Instrukcja.baml
