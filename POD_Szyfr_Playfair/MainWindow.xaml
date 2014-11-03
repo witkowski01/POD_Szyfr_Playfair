@@ -43,7 +43,7 @@
         <TextBlock Margin="344,10,606,639"  FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Klucz"/></TextBlock>
         <DataGrid x:Name="grid_klucz_Copy" Margin="709,392,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
         <TextBlock Margin="699,328,43,290" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Tablica z alfabetem dostępnym "/><LineBreak/><Run Text="podczas szyfrowania"/></TextBlock>
-        <MediaElement x:Name="MusicElement" Source="music.mp3" Margin="569,539,369,93" IsEnabled="False" />
+        <MediaElement x:Name="MusicElement" Source="music.mp3" Margin="569,539,369,93" />
         <Button x:Name="PlayButton" Margin="0,593,352,49" HorizontalAlignment="Right" Width="108" Click="Play" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Music on"/>
         <Button x:Name="PlayButton_Copy" Margin="0,632,352,10" HorizontalAlignment="Right" Width="108" Click="Stop" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Music mute"/>
         <Button x:Name="InstrukcjaButton_Copy" Margin="0,10,210,603" HorizontalAlignment="Right" Width="88" Click="Instrukcja2" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Instrukcja&#xA;OPISOWA"/>
