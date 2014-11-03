@@ -20,15 +20,18 @@ namespace POD_Szyfr_Playfair
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Playfair playfair;
+        //private Playfair playfair;
         public MainWindow()
         {
             InitializeComponent();
+            macierz_na_grida();
         }
 
                 public Char[,] playfair_tab = new Char[5, 5] { { ' ', ' ', ' ', ' ', ' ' }, { ' ', ' ', ' ', ' ', ' ' }, 
                                                         { ' ', ' ', ' ', ' ', ' ' }, { ' ', ' ', ' ', ' ', ' ' }, { ' ', ' ', ' ', ' ', ' ' } };
 
+                public Char[,] playfair_tab1_alfabet = new Char[5, 5]{ { 'a', 'b', 'c', 'd', 'e' }, { 'f', 'g', 'h', 'i', 'k' }, 
+                                                        { 'l', 'm', 'n', 'o', 'p' }, { 'q', 'r', 's', 't', 'u' }, { 'w', 'v', 'x', 'y', 'z' } };
 
         
 
@@ -377,6 +380,27 @@ namespace POD_Szyfr_Playfair
             grid_klucz.ItemsSource = klucz_do_grida;
 
         }
+        private void macierz_na_grida()
+        {
+
+            var do_grida = new List<StringValues>();
+            for (int i = 0; i < 5; i++)
+            {
+                var tmp = new StringValues();
+                //  var klucz = new Klucz_szyfrujacy(playfair.wartosc);
+                tmp.col1 = playfair_tab1_alfabet[i, 0].ToString();
+                tmp.col2 = playfair_tab1_alfabet[i, 1].ToString();
+                tmp.col3 = playfair_tab1_alfabet[i, 2].ToString();
+                tmp.col4 = playfair_tab1_alfabet[i, 3].ToString();
+                tmp.col5 = playfair_tab1_alfabet[i, 4].ToString();
+
+
+                do_grida.Add(tmp);
+            }
+
+            grid_klucz_Copy.ItemsSource = do_grida;
+
+        }
 
         private void output(object sender, TextChangedEventArgs e)
         {
@@ -404,10 +428,9 @@ namespace POD_Szyfr_Playfair
 
         private void Szyfrowanie_Click(object sender, RoutedEventArgs e)
         {
-            
+                
                 string key;
                 StringBuilder sb1 = new StringBuilder(klucz.Text);
-
 
 
                 sb1.Replace('ą', 'a')
@@ -451,7 +474,7 @@ namespace POD_Szyfr_Playfair
             klucz.Text.ToLower();
 
                 key = klucz.Text;
-               
+            playfair_tab1_alfabet = playfair_tab;
                 set_key(key);
             
             macierz_kluczu_na_grida();
@@ -746,7 +769,34 @@ namespace POD_Szyfr_Playfair
             i.Show();
         }
 
+        private void Play(object sender, RoutedEventArgs e)
+        {
+            if (MusicElement.IsMuted)
+            {
+                MusicElement.IsMuted = false;
+            }
+        }
 
+        private void Stop(object sender, RoutedEventArgs e)
+        {
+            if (MusicElement.IsMuted == false)
+            {
+                MusicElement.IsMuted = true;
+            }
+
+        }
+
+        private void Instrukcja2(object sender, RoutedEventArgs e)
+        {
+            var i = new Instrukcja2();
+            i.Show();
+        }
+
+        private void Autorzy(object sender, RoutedEventArgs e)
+        {
+            var i = new Autorzy();
+            i.Show();
+        }
 
     }
 }

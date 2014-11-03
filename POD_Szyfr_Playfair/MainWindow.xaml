@@ -2,43 +2,54 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:POD_Szyfr_Playfair"
-        Title="Konrad Witkowski" Height="470" Width="715.5" Background="#FFA5FF09" Foreground="Black">
+        Title="Konrad Witkowski" Height="736" Width="1024" Background="#FFA5FF09" Foreground="Black">
 
-    <Grid Margin="5,0,-5,0">
-
-        <TextBlock Margin="26,10,464,382" FontFamily="Cambria" FontSize="18">
+    <Grid Margin="5,0,-5,29">
+        <Image Margin="0,0,-22,-30" Source="Matrix.gif" Stretch="Fill"/>
+        <TextBlock Margin="0,10,672,601" FontFamily="Arial Black" FontSize="22" FontWeight="Bold">
             <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF271F1F" Offset="1"/>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="DarkRed" Offset="3"/>
+                    <GradientStop Color="Red"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground><Run Text="Program "/><Run Text=" przedstawiający"/><LineBreak/><Run Text=" działanie"/><Run Text=" szyfru PLAYFAIR"/></TextBlock>
-        <Button x:Name="InstrukcjaButton" Margin="0,74,98,330" HorizontalAlignment="Right" Width="88" Click="Instrukcja">Instrukcja</Button>
-        <Button x:Name="Deszyfrowaniee" Margin="0,392,453,16" HorizontalAlignment="Right" Width="107" Click="Button_Click_3">Deszyfrowanie</Button>
-        <Button x:Name="Szyfrowaniee" Margin="0,392,567,16" HorizontalAlignment="Right" Width="108" Click="Szyfrowanie_Click">Szyfrowanie</Button>
-        <Button x:Name="Wczytaj" Margin="0,392,273,16" HorizontalAlignment="Right" Width="103" Click="Button_Click_2">Wczytaj z pliku</Button>
-        <Button x:Name="Zapisz" Margin="0,392,160,16" HorizontalAlignment="Right" Width="108" Click="Button_Click">Zapisz do pliku</Button>
-        <Button x:Name="Zamknij" Margin="0,396,10,16" HorizontalAlignment="Right" Width="84" Click="Close" RenderTransformOrigin="0.393,-3.722">Zamknij</Button>
-        <Button x:Name="Minimalizuj" Margin="0,363,10,48" HorizontalAlignment="Right" Width="84" Click="Minimalize" Content="Minimalizuj"/>
-        <DataGrid x:Name="grid_klucz" Margin="457,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
 
-        <TextBox x:Name="wejscie" Margin="39,148,395,104" TextChanged="input" TextWrapping="Wrap">
+        <Button x:Name="InstrukcjaButton" Margin="0,10,98,603" HorizontalAlignment="Right" Width="88" Click="Instrukcja" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Instrukcja&#xD;&#xA;VIDEO"/>
+        <Button x:Name="Deszyfrowaniee" Margin="0,425,466,200" HorizontalAlignment="Right" Width="144" Click="Button_Click_3" Background="#FF22CF22" FontSize="16" FontWeight="Bold">Deszyfrowanie</Button>
+        <Button x:Name="Szyfrowaniee" Margin="0,425,768,200" HorizontalAlignment="Right" Width="146" Click="Szyfrowanie_Click" Background="#FF22CF22" FontSize="16" FontWeight="Bold">Szyfrowanie
+        </Button>
+        <Button x:Name="Wczytaj" Margin="0,99,813,544" HorizontalAlignment="Right" Width="164" Click="Button_Click_2" Background="#FF22CF22" FontSize="16" FontWeight="Bold">Wczytaj z pliku</Button>
+        <Button x:Name="Zapisz" Margin="0,99,518,544" HorizontalAlignment="Right" Width="159" Click="Button_Click" Background="#FF22CF22" FontSize="16" FontWeight="Bold">Zapisz do pliku</Button>
+        <Button x:Name="Zamknij" Margin="0,632,30,10" HorizontalAlignment="Right" Width="108" Click="Close" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold">Zamknij</Button>
+        <Button x:Name="Minimalizuj" Margin="0,588,30,49" HorizontalAlignment="Right" Width="108" Click="Minimalize" Content="Minimalizuj" RenderTransformOrigin="0.702,1.308" Background="#FF22CF22" FontSize="16" FontWeight="Bold"/>
+        <DataGrid x:Name="grid_klucz" Margin="709,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
+
+        <TextBox x:Name="wejscie" Margin="39,148,705,290" TextChanged="input" TextWrapping="Wrap">
             <TextBox.DataContext>
                 <local:Playfair wejscie="wejscie"/>
             </TextBox.DataContext>
         </TextBox>
 
-        <TextBox x:Name="wyjscie" Margin="336,148,98,104" TextChanged="output" TextWrapping="Wrap">
+        <TextBox x:Name="wyjscie" Margin="339,148,399,290" TextChanged="output" TextWrapping="Wrap">
             <TextBox.DataContext>
                 <local:Playfair wyjscie="wyjscie"/>
             </TextBox.DataContext>
         </TextBox>
-        <TextBox x:Name="adres_pliku_in" Margin="39,340,426,69" TextChanged="input_adres" TextWrapping="Wrap" />
-        <TextBox x:Name="adres_pliku_out" Margin="336,340,129,69" TextChanged="output_adres" TextWrapping="Wrap" />
-        <TextBox x:Name="klucz" Margin="218,78,298,327" TextChanged="key" TextWrapping="Wrap" Text="{Binding klucz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBlock Margin="37,125,598,284"><Run Text="Wejscie"/></TextBlock>
-        <TextBlock Margin="339,125,0,271"><Run Text="Wyjscie"/></TextBlock>
-        <TextBlock Margin="168,84,490,330" Text="Klucz"/>
+        <TextBox x:Name="klucz" Margin="406,10,418,639" TextChanged="key" TextWrapping="Wrap" Text="{Binding klucz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Margin="37,62,894,582" FontSize="18" FontWeight="Bold" Foreground="Red" Background="Black"><Run Text="Wejscie"/><Run Text=":"/></TextBlock>
+        <TextBlock Margin="339,62,594,582"
+        	FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Wyjscie"/><Run Text=":"/></TextBlock>
+        <TextBlock Margin="699,78,43,556" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Tablica szyfrowania(z kluczem)"/><Run Text=" :"/></TextBlock>
+        <TextBlock Margin="344,10,606,639"  FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Klucz"/></TextBlock>
+        <DataGrid x:Name="grid_klucz_Copy" Margin="709,392,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
+        <TextBlock Margin="699,328,43,290" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Tablica z alfabetem dostępnym "/><LineBreak/><Run Text="podczas szyfrowania"/></TextBlock>
+        <MediaElement x:Name="MusicElement" Source="music.mp3" Margin="569,539,369,93" IsEnabled="False" />
+        <Button x:Name="PlayButton" Margin="0,593,352,49" HorizontalAlignment="Right" Width="108" Click="Play" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Music on"/>
+        <Button x:Name="PlayButton_Copy" Margin="0,632,352,10" HorizontalAlignment="Right" Width="108" Click="Stop" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Music mute"/>
+        <Button x:Name="InstrukcjaButton_Copy" Margin="0,10,210,603" HorizontalAlignment="Right" Width="88" Click="Instrukcja2" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Instrukcja&#xA;OPISOWA"/>
+        <TextBlock Margin="102,597,672,26" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Autor: Konrad Witkowski"/><LineBreak/><Run Text="witkowski01"/></TextBlock>
+        <Button x:Name="AutorzyButton" Margin="0,593,522,20" HorizontalAlignment="Right" Width="88" Click="Autorzy" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Autorzy"/>
+
 
     </Grid>
 </Window>

@@ -53,6 +53,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Autorzy.xaml.cs">
+      <DependentUpon>Autorzy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Instrukcja2.xaml.cs">
+      <DependentUpon>Instrukcja2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Playfair.cs" />
     <Compile Include="Wczytaj.cs" />
@@ -60,6 +66,14 @@
       <DependentUpon>Instrukcja.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zapisz.cs" />
+    <Page Include="Autorzy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Instrukcja2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -103,6 +117,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Geralt_Yennefer_-size_1920x1200_en.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Matrix.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,36 @@
+﻿<Window x:Class="POD_Szyfr_Playfair.Instrukcja2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:POD_Szyfr_Playfair"
+        Title="Instrukcja" Height="700.09" Width="1020.112" Background="#FFA5FF09" Foreground="Black">
+    <Grid Margin="5,0,-254,-161">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="483*"/>
+            <ColumnDefinition Width="134*"/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="-285,-58,-38,-209" Source="Matrix.gif" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <TextBlock Margin="10,9,778,779" FontFamily="Arial Black" FontSize="22" FontWeight="Bold" Text="INSTRUKCJA">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="DarkRed" Offset="3"/>
+                    <GradientStop Color="Red"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground></TextBlock>
+        <Button x:Name="Minimalizuj" Margin="0,588,23,187" HorizontalAlignment="Right" Width="108" Click="Minimalize" Content="Minimalizuj" RenderTransformOrigin="0.702,1.308" Background="#FF22CF22" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="Zamknij" Margin="0,588,152,187" HorizontalAlignment="Right" Width="108" Click="Close" RenderTransformOrigin="0.393,-3.722" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Zamknij"/>
+        <Image Margin="10,173,721,398" Source="Image2.png" Stretch="Fill"/>
+        <TextBlock Margin="10,92,700,678" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Umieszczamy klucz w tablicy w"/><LineBreak/><Run Text="następujący sposób:"/></TextBlock>
+        <TextBlock Margin="10,46,686,743" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black" Text="Klucz w przykładzie : KEYWORD"/>
+        <TextBlock Margin="31,438,722,287" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Jak widać wpisujemy"/><LineBreak/><Run Text=" pojedyncze litery bez"/><LineBreak/><Run Text=" powt"/><Run Text="ó"/><Run Text="rzeń, i u"/><Run Text="z"/><Run Text="upełniamy"/><LineBreak/><Run Text=" alfabet do końca "/></TextBlock>
+        <TextBlock Margin="319,121,418,678" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black" Text="Szyfrowane słowo:  WORD"/>
+        <TextBlock Margin="318,173,418,601" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Słowo dzielimy na pary liter"/><LineBreak/><Run Text="WO  RD"/><LineBreak/><Run/></TextBlock>
+        <TextBlock Margin="317,257,419,506" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Literki po zamianie"/><LineBreak/><Run Text="OK   DA"/><LineBreak/></TextBlock>
+        <TextBlock Margin="318,334,389,365" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Pary liter możemy podzielić"/><LineBreak/><Run Text=" na trzy grupy:"/><LineBreak/><Run Text="-"/><Run Text="litery są w tym samym wierszu"/><LineBreak/><Run Text="-"/><Run Text="litery są w tej samej kolumnie"/><LineBreak/><Run Text="-"/><Run Text="pozostałe"/></TextBlock>
+        <TextBlock Margin="675,56,40,663" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Jeśli litety leżą w tym samym "/><LineBreak/><Run Text="wierszu zastępujemy je "/><LineBreak/><Run Text="sąsiadującymi z nimi literami z "/><LineBreak/><Run Text="prawej strony"/></TextBlock>
+        <TextBlock Margin="667,192,0,554" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Jeśli litety leżą w "/><Run Text="tej samej kolumnie "/><LineBreak/><Run Text="powinny zostać"/><Run Text=" "/><Run Text="zastąpione "/><LineBreak/><Run Text="przez litery leżące pod"/><Run Text=" "/><Run Text=" nimi"/><Run Text="."/></TextBlock>
+        <TextBlock Margin="637,298,0,287" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="w innych wypadkach:  aby zaszyfrować"/><LineBreak/><Run Text=" pierwszą literę, idziemy wzdłuż "/><LineBreak/><Run Text="wiersza, aż dotrzemy do kolumny, "/><LineBreak/><Run Text="która zawiera drugą literę. Litera na"/><LineBreak/><Run Text="krzyżowaniu"/><Run Text=" "/><Run Text="wiersza z kolumną "/><LineBreak/><Run Text="zastępuje pierwszą literę. W"/><Run Text=" "/><Run Text="celu "/><LineBreak/><Run Text="zaszyfrowania drugiej z liter, szukamy "/><LineBreak/><Run Text="wzdłuż wiersza kolumny, w której "/><LineBreak/><Run Text="znajduje się"/><Run Text=" "/><Run Text="pierwsza litera. Znak ze"/><LineBreak/><Run Text=" "/><Run Text="s"/><Run Text="krzyżowania reprezentuje drugą literę."/></TextBlock>
+
+    </Grid>
+</Window>
+
+

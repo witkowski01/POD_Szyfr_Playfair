@@ -33,5 +33,19 @@ namespace POD_Szyfr_Playfair
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void Play(object sender, RoutedEventArgs e)
+        {
+            video.Play();
+            video.IsEnabled = true;
+
+        }
+
+        private void Stop(object sender, RoutedEventArgs e)
+        {
+            video.Pause();
+            video.IsEnabled = false;
+
+        }
     }
 }
