@@ -387,7 +387,6 @@ namespace POD_Szyfr_Playfair
             for (int i = 0; i < 5; i++)
             {
                 var tmp = new StringValues();
-                //  var klucz = new Klucz_szyfrujacy(playfair.wartosc);
                 tmp.col1 = playfair_tab1_alfabet[i, 0].ToString();
                 tmp.col2 = playfair_tab1_alfabet[i, 1].ToString();
                 tmp.col3 = playfair_tab1_alfabet[i, 2].ToString();
@@ -402,20 +401,7 @@ namespace POD_Szyfr_Playfair
 
         }
 
-        private void output(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void input_adres(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void output_adres(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
 
         public string RemoveAccent(string txt)
         {
@@ -472,6 +458,11 @@ namespace POD_Szyfr_Playfair
                 var result1 = sb1.ToString();
             klucz.Text = result1;
             klucz.Text.ToLower();
+
+            if (klucz.Text == "ocena")
+            {
+                MessageBox.Show("Chcę 5 :)");
+            }
 
                 key = klucz.Text;
             playfair_tab1_alfabet = playfair_tab;
@@ -588,7 +579,7 @@ namespace POD_Szyfr_Playfair
     || p2 == '\\' || p2 == '|' || p2 == ';' || p2 == ':' || p2 == '\'' || p2 == '"' || p2 == ',' || p2 == '.' || p2 == '<' || p2 == '>'
     || p2 == '/' || p2 == '?')
             { p2 = 'x'; }
-
+                                                                                                                                 
             */
             if (check_wiersz(p1, p2))
             {
@@ -685,7 +676,6 @@ namespace POD_Szyfr_Playfair
         }
 
 
-
         private bool checkAlfabet(char alfabet)
         {
             bool found = false;
@@ -727,7 +717,6 @@ namespace POD_Szyfr_Playfair
             }
             return found;
         }
-
         private bool check_kol(char p1, char p2)
         {
             bool found = false;
@@ -753,15 +742,8 @@ namespace POD_Szyfr_Playfair
             return found;
         }
 
-        private void key(object sender, TextChangedEventArgs e)
-        {
 
-        }
-
-        private void input(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
 
         private void Instrukcja(object sender, RoutedEventArgs e)
         {
@@ -798,5 +780,40 @@ namespace POD_Szyfr_Playfair
             i.Show();
         }
 
+        private void key_in(object sender, RoutedEventArgs e)
+        {
+            var key_in = new Wczytaj();
+
+            //takie coś działa
+            klucz.Text = key_in.odczyt_zawartosci();
+        }
+
+        private void key_out(object sender, RoutedEventArgs e)
+        {
+            var save = new Zapisz(klucz.Text);
+        }
+
+
+
+
+
+
+        // Puste funkcje
+        /*
+        private void output(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void key(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void input(object sender, TextChangedEventArgs e)
+        {
+
+        }
+          */
     }
 }

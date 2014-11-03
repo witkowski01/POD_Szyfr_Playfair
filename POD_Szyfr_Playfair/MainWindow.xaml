@@ -5,7 +5,7 @@
         Title="Konrad Witkowski" Height="736" Width="1024" Background="#FFA5FF09" Foreground="Black">
 
     <Grid Margin="5,0,-5,29">
-        <Image Margin="0,0,-22,-30" Source="Matrix.gif" Stretch="Fill"/>
+        <Image Margin="-22,0,0,-30" Source="Matrix.gif" Stretch="Fill"/>
         <TextBlock Margin="0,10,672,601" FontFamily="Arial Black" FontSize="22" FontWeight="Bold">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -24,18 +24,18 @@
         <Button x:Name="Minimalizuj" Margin="0,588,30,49" HorizontalAlignment="Right" Width="108" Click="Minimalize" Content="Minimalizuj" RenderTransformOrigin="0.702,1.308" Background="#FF22CF22" FontSize="16" FontWeight="Bold"/>
         <DataGrid x:Name="grid_klucz" Margin="709,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
 
-        <TextBox x:Name="wejscie" Margin="39,148,705,290" TextChanged="input" TextWrapping="Wrap">
+        <TextBox x:Name="wejscie" Margin="39,148,0,0"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="272" Height="238" VerticalAlignment="Top">
             <TextBox.DataContext>
                 <local:Playfair wejscie="wejscie"/>
             </TextBox.DataContext>
         </TextBox>
 
-        <TextBox x:Name="wyjscie" Margin="339,148,399,290" TextChanged="output" TextWrapping="Wrap">
+        <TextBox x:Name="wyjscie" Margin="0,0,399,290" TextWrapping="Wrap" HorizontalAlignment="Right" Width="278" Height="238" VerticalAlignment="Bottom">
             <TextBox.DataContext>
                 <local:Playfair wyjscie="wyjscie"/>
             </TextBox.DataContext>
         </TextBox>
-        <TextBox x:Name="klucz" Margin="406,10,418,639" TextChanged="key" TextWrapping="Wrap" Text="{Binding klucz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="klucz" Margin="406,10,418,639"  TextWrapping="Wrap" Text="{Binding klucz, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBlock Margin="37,62,894,582" FontSize="18" FontWeight="Bold" Foreground="Red" Background="Black"><Run Text="Wejscie"/><Run Text=":"/></TextBlock>
         <TextBlock Margin="339,62,594,582"
         	FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Wyjscie"/><Run Text=":"/></TextBlock>
@@ -49,6 +49,8 @@
         <Button x:Name="InstrukcjaButton_Copy" Margin="0,10,210,603" HorizontalAlignment="Right" Width="88" Click="Instrukcja2" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Instrukcja&#xA;OPISOWA"/>
         <TextBlock Margin="102,597,672,26" FontSize="18" FontWeight="Bold"  Foreground="Red" Background="Black"><Run Text="Autor: Konrad Witkowski"/><LineBreak/><Run Text="witkowski01"/></TextBlock>
         <Button x:Name="AutorzyButton" Margin="0,593,522,20" HorizontalAlignment="Right" Width="88" Click="Autorzy" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="Autorzy"/>
+        <Button x:Name="Wczytaj_key" Margin="0,42,522,601" HorizontalAlignment="Right" Width="76" Click="key_in" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="KEY IN"/>
+        <Button x:Name="Zapisz_key" Margin="0,42,418,601" HorizontalAlignment="Right" Width="78" Click="key_out" Background="#FF22CF22" FontSize="16" FontWeight="Bold" Content="KEY OUT"/>
 
 
     </Grid>
