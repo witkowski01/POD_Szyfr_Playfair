@@ -196,10 +196,10 @@ namespace POD_Szyfr_Playfair
             key = RemoveAccent_key(klucz.Text);
             //playfair_tab1_alfabet = playfair_tab;
             set_key(key);
-            klucz.Text = key;
+           // klucz.Text = key;
             macierz_kluczu_na_grida();
 
-
+            klucz.Text = key;
             wejscie.Text = wejscie.Text.ToLower();
             StringBuilder sb = new StringBuilder(wejscie.Text);
             sb.Replace('j', 'i');
@@ -482,9 +482,10 @@ namespace POD_Szyfr_Playfair
             key = RemoveAccent_key(klucz.Text);
             //playfair_tab1_alfabet = playfair_tab;
                 set_key(key);
-                klucz.Text = key;
+                
             
             macierz_kluczu_na_grida();
+            klucz.Text = key;
             wejscie.Text = wejscie.Text.ToLower();
             StringBuilder sb = new StringBuilder(wejscie.Text);
             sb.Replace('j', 'i');
