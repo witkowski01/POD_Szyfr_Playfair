@@ -192,11 +192,21 @@ namespace POD_Szyfr_Playfair
 
         private void Button_Click_3(object sender, RoutedEventArgs e)   // Deszyfrowanie
         {
-           //adres_pliku_in.Text = "ghhgh";
-
-             string key;
-            key = klucz.Text;
+            string key;
+            key = RemoveAccent_key(klucz.Text);
+            //playfair_tab1_alfabet = playfair_tab;
             set_key(key);
+            macierz_kluczu_na_grida();
+
+
+            wejscie.Text = wejscie.Text.ToLower();
+            StringBuilder sb = new StringBuilder(wejscie.Text);
+            sb.Replace('j', 'i');
+            var result = sb.ToString();
+            wejscie.Text = result;
+            wejscie.Text = RemoveAccent(wejscie.Text);
+            wejscie.Text = wytnij(playfair_tab, wejscie.Text);
+
             string input_text = wejscie.Text;
             string output_text = null;
             int m = 0;
@@ -412,60 +422,64 @@ namespace POD_Szyfr_Playfair
            
         }
 
-        private void Szyfrowanie_Click(object sender, RoutedEventArgs e)
+        public string RemoveAccent_key(string key)
         {
-                
-                string key;
-                StringBuilder sb1 = new StringBuilder(klucz.Text);
+            StringBuilder sb1 = new StringBuilder(key);
 
 
-                sb1.Replace('ą', 'a')
+            sb1.Replace('ą', 'a')
 
-                  .Replace('ć', 'c')
+              .Replace('ć', 'c')
 
-                  .Replace('ę', 'e')
+              .Replace('ę', 'e')
 
-                  .Replace('ł', 'l')
+              .Replace('ł', 'l')
 
-                  .Replace('ń', 'n')
+              .Replace('ń', 'n')
 
-                  .Replace('ó', 'o')
+              .Replace('ó', 'o')
 
-                  .Replace('ś', 's')
+              .Replace('ś', 's')
 
-                  .Replace('ż', 'z')
+              .Replace('ż', 'z')
 
-                  .Replace('ź', 'z')
+              .Replace('ź', 'z')
 
-                  .Replace('Ą', 'A')
+              .Replace('Ą', 'A')
 
-                  .Replace('Ć', 'C')
+              .Replace('Ć', 'C')
 
-                  .Replace('Ę', 'E')
+              .Replace('Ę', 'E')
 
-                  .Replace('Ł', 'L')
+              .Replace('Ł', 'L')
 
-                  .Replace('Ń', 'N')
+              .Replace('Ń', 'N')
 
-                  .Replace('Ó', 'O')
+              .Replace('Ó', 'O')
 
-                  .Replace('Ś', 'S')
+              .Replace('Ś', 'S')
 
-                  .Replace('Ż', 'Z')
+              .Replace('Ż', 'Z')
 
-                  .Replace('Ź', 'Z');
-            
-                var result1 = sb1.ToString();
-            klucz.Text = result1;
-            klucz.Text.ToLower();
+              .Replace('Ź', 'Z');
 
-            if (klucz.Text == "ocena")
+            var result1 = sb1.ToString();
+            key = result1;
+            key.ToLower();
+
+            if (key == "ocena")
             {
                 MessageBox.Show("Chcę 5 :)");
             }
 
-                key = klucz.Text;
-            playfair_tab1_alfabet = playfair_tab;
+            return key;
+        }
+        private void Szyfrowanie_Click(object sender, RoutedEventArgs e)
+        {
+                
+            string key;
+            key = RemoveAccent_key(klucz.Text);
+            //playfair_tab1_alfabet = playfair_tab;
                 set_key(key);
             
             macierz_kluczu_na_grida();
@@ -514,12 +528,7 @@ namespace POD_Szyfr_Playfair
                         }
                     }
                 }
-                wyjscie.Text = output_text.ToString();//playfair_tab[0, 0].ToString() + playfair_tab[0, 1].ToString() + playfair_tab[0, 2].ToString() +
-                //playfair_tab[0, 3].ToString() + playfair_tab[0, 4].ToString() + playfair_tab[1, 0].ToString() + playfair_tab[1, 1].ToString() +
-                //playfair_tab[1, 2].ToString() + playfair_tab[1, 3].ToString() + playfair_tab[1, 4].ToString() + playfair_tab[2, 0].ToString() + 
-                //playfair_tab[2, 1].ToString() + playfair_tab[2, 2].ToString() + playfair_tab[2, 3].ToString() + playfair_tab[2, 4].ToString() + 
-                //playfair_tab[3, 0].ToString() + playfair_tab[3, 1].ToString() + playfair_tab[3, 2].ToString() + playfair_tab[3, 3].ToString() + 
-                //playfair_tab[3, 4].ToString();
+                wyjscie.Text = output_text.ToString();
                 for (int i = 0; i < 5; i++)
                     for (int j = 0; j < 5; j++)
                         playfair_tab[i, j] = ' ';
@@ -798,7 +807,7 @@ namespace POD_Szyfr_Playfair
 
 
 
-        // Puste funkcje
+        // Puste funkcje już zbędne
         /*
         private void output(object sender, TextChangedEventArgs e)
         {
