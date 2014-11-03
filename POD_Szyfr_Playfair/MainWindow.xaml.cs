@@ -155,6 +155,7 @@ namespace POD_Szyfr_Playfair
                     }
                 }
             }
+            klucz.Text = key;
         }
 
         public string wytnij(Char[,] alfabet, string wejscie)
@@ -196,10 +197,10 @@ namespace POD_Szyfr_Playfair
             key = RemoveAccent_key(klucz.Text);
             //playfair_tab1_alfabet = playfair_tab;
             set_key(key);
-           // klucz.Text = key;
+            
             macierz_kluczu_na_grida();
 
-            klucz.Text = key;
+
             wejscie.Text = wejscie.Text.ToLower();
             StringBuilder sb = new StringBuilder(wejscie.Text);
             sb.Replace('j', 'i');
@@ -470,22 +471,25 @@ namespace POD_Szyfr_Playfair
 
             if (key == "ocena")
             {
-                MessageBox.Show("Chcę 5 :)");
+                MessageBox.Show("Proszę pięknie o 5");
             }
 
             return key;
         }
+
+
+
         private void Szyfrowanie_Click(object sender, RoutedEventArgs e)
         {
                 
             string key;
             key = RemoveAccent_key(klucz.Text);
             //playfair_tab1_alfabet = playfair_tab;
-                set_key(key);
+            set_key(key);
                 
             
             macierz_kluczu_na_grida();
-            klucz.Text = key;
+           
             wejscie.Text = wejscie.Text.ToLower();
             StringBuilder sb = new StringBuilder(wejscie.Text);
             sb.Replace('j', 'i');
