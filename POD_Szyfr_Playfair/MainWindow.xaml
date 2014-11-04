@@ -24,13 +24,13 @@
         <Button x:Name="Minimalizuj" Margin="0,588,30,49" HorizontalAlignment="Right" Width="108" Click="Minimalize" Content="Minimalizuj" RenderTransformOrigin="0.702,1.308" Background="#FF22CF22" FontSize="16" FontWeight="Bold"/>
         <DataGrid x:Name="grid_klucz" Margin="709,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.576" Height="191" HeadersVisibility="None" FontSize="16" HorizontalAlignment="Left" Width="241" />
 
-        <TextBox x:Name="wejscie" Margin="39,148,0,0"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="272" Height="238" VerticalAlignment="Top">
+        <TextBox x:Name="wejscie" Margin="37,137,418,0"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="272" Height="238" VerticalAlignment="Top">
             <TextBox.DataContext>
                 <local:Playfair wejscie="wejscie"/>
             </TextBox.DataContext>
         </TextBox>
 
-        <TextBox x:Name="wyjscie" Margin="0,0,399,290" TextWrapping="Wrap" HorizontalAlignment="Right" Width="278" Height="238" VerticalAlignment="Bottom">
+        <TextBox x:Name="wyjscie" Margin="0,137,418,0" TextWrapping="Wrap" HorizontalAlignment="Right" Width="272" Height="238" VerticalAlignment="Top">
             <TextBox.DataContext>
                 <local:Playfair wyjscie="wyjscie"/>
             </TextBox.DataContext>
